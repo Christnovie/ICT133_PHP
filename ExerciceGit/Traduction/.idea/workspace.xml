@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="09861cf3-1847-4f24-8101-009b23d74032" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="1f8c6c7f-5d27-41b9-b221-ee321ef041b8" name="webServer" port="8080" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
+  <component name="ProjectId" id="1UPz7IyFanFjycn5kwvlCqCrqJv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php/ext/php_xdebug.dll" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RunManager">
+    <configuration name="WebServer" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09861cf3-1847-4f24-8101-009b23d74032" name="Default Changelist" comment="" />
+      <created>1575272849131</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575272849131</updated>
+      <workItem from="1575272850268" duration="6874000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="553" y="205" key="#CLI_Interpreters" timestamp="1575290507799">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="553" y="205" key="#CLI_Interpreters/0.0.1920.1080@0.0.1920.1080" timestamp="1575290507799" />
+    <state x="680" y="142" key="#PHP" timestamp="1575272921317">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="680" y="142" key="#PHP/0.0.1920.1080@0.0.1920.1080" timestamp="1575272921317" />
+    <state x="427" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575290386238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="427" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575290386238" />
+    <state x="753" y="305" key="FileChooserDialogImpl" timestamp="1575273946650">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="753" y="305" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575273946650" />
+    <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1575290355550">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575290355550" />
+    <state width="1340" height="266" key="GridCell.Tab.0.center" timestamp="1575290355549">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575290355549" />
+    <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1575290355549">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575290355549" />
+    <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1575290355549">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575290355549" />
+    <state x="808" y="474" key="NewPhpFileDialog" timestamp="1575273089130">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="808" y="474" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575273089130" />
+    <state x="474" y="193" key="SettingsEditor" timestamp="1575290510137">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="474" y="193" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1575290510137" />
+    <state x="742" y="181" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1575273069204">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="742" y="181" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575273069204" />
+  </component>
+</project>
