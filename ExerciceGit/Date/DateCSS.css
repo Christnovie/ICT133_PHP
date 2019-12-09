@@ -1,0 +1,17 @@
+*{
+    background: rgb(29,29,29);
+    color: white;
+
+
+}
+.dates{
+
+    border: white 3px ridge ;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+}
+#contenent{
+align-content: center;
+
+}
