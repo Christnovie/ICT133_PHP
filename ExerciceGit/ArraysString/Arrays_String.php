@@ -16,10 +16,10 @@ $Dweek = array(
     'Saturday' => 'Sat',
     'Sunday' => 'Sun',
 );
-$date = array(date('j'),date('F'),date('Y'),date()) ;
-$days = $date[0];
-$dataMont = $date[1];
-$nowYear =$date[2];
+$date = array(date('j'),date('F'),date('Y'),date('d')) ;
+$days = ;
+$dataMont = ;
+$nowYear =;
 $f = 0;
 
 ?>
@@ -40,8 +40,9 @@ $f = 0;
     <ul>
 
         <ul>
-            <li class="prev"><a href="arrays_string.php" id =  <?php
-              if($f == 1) {
+            <li class="prev"  <?php
+              $nowMonth = $dataMont;
+                if($numValid == 90) {
                   $nowMonth = $dataMont;
               }else {
                 for ($i = 0;$i < 12 ;$i++){
@@ -50,11 +51,11 @@ $f = 0;
                         $nowMonth = $Month[$i - 1];
                     }
                 }}
-                ?>> &#10094;</a></li>
+                ?>>&#10094;</li>
 
             <?php echo $nowMonth ?><br>
             <span style="font-size:18px"><?php echo $nowYear ?></span>
-            <li class="next"><a>&#10095;</a></li>
+            <li class="next">&#10095;</li>
         </ul>
 
     </ul>
@@ -84,7 +85,7 @@ $numValid = 1;
             $numValid++;
         }
         else
-            if()
+
             echo"<li>$i</li>";
 
 
