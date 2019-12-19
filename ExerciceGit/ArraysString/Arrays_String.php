@@ -5,9 +5,9 @@
  *Initial version by: Christnovie.KIALA-BI
  *Initial version created on : 09.12.2019
  */
-
-
-$Dweekend = array(
+date_default_timezone_set('UTC');
+$Month = array('January','February ','March','April','May','June','Jully','July','August','September','October','November','December');
+$Dweek = array(
         'Monday' => 'Mon',
     'Tuesday' => 'Tue',
     'Wednesday' => 'Wed',
@@ -15,9 +15,12 @@ $Dweekend = array(
     'Friday' => 'Fri',
     'Saturday' => 'Sat',
     'Sunday' => 'Sun',
-
-
-)
+);
+$date = array(date('j'),date('F'),date('Y'),date()) ;
+$days = $date[0];
+$dataMont = $date[1];
+$nowYear =$date[2];
+$f = 0;
 
 ?>
 <!DOCTYPE html >
@@ -32,58 +35,64 @@ $Dweekend = array(
 
 <h1>CSS Calendar</h1>
 
+
 <div class="month">
     <ul>
-        <li class="prev">&#10094;</li>
-        <li class="next">&#10095;</li>
-        <li>
-            August<br>
-            <span style="font-size:18px">2017</span>
-        </li>
+
+        <ul>
+            <li class="prev"><a href="arrays_string.php" id =  <?php
+              if($f == 1) {
+                  $nowMonth = $dataMont;
+              }else {
+                for ($i = 0;$i < 12 ;$i++){
+
+                    if($Month[$i] == $nowMonth) {
+                        $nowMonth = $Month[$i - 1];
+                    }
+                }}
+                ?>> &#10094;</a></li>
+
+            <?php echo $nowMonth ?><br>
+            <span style="font-size:18px"><?php echo $nowYear ?></span>
+            <li class="next"><a>&#10095;</a></li>
+        </ul>
+
     </ul>
 </div>
 
 <ul class="weekdays">
-    <li><?php
 
+        <?php
+
+           foreach ($Dweek as $item ){
+                echo "<li>$item</li>";
+
+           } ;
 
         ?>
-    </li>
+
 
 </ul>
 
 <ul class="days">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li><span class="active">10</span></li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
-    <li>31</li>
+<?php
+$numValid = 1;
+    for($i = 1;$i <= 35;$i++){
+
+        if($i == $days){
+            echo"<li><span class='active'>$i</span></li>";
+            $numValid++;
+        }
+        else
+            if()
+            echo"<li>$i</li>";
+
+
+    }
+?>
+
+
+
 </ul>
 
 </body>

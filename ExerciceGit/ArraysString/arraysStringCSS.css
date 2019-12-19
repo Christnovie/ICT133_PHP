@@ -21,15 +21,19 @@ body {font-family: Verdana, sans-serif;}
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-
+a{
+    color : white;
+    text-underline: none;
+    text-underline-offset: auto;
+}
 /* Previous button inside month header */
-.month .prev {
+prev {
     float: left;
     padding-top: 10px;
 }
 
 /* Next button */
-.month .next {
+next {
     float: right;
     padding-top: 10px;
 }
@@ -66,7 +70,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Highlight the "current" day */
-.days li .active {
+.active {
     padding: 5px;
     background: #1abc9c;
     color: white !important

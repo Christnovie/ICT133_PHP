@@ -20,7 +20,8 @@
 <body>
 <div id="">
     <div class="">
-        <?phpphpinfo();
+        <?php
+        phpinfo();
 
 
 
