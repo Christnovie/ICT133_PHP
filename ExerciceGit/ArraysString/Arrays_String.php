@@ -5,6 +5,7 @@
  *Initial version by: Christnovie.KIALA-BI
  *Initial version created on : 09.12.2019
  */
+
 date_default_timezone_set('UTC');
 $Month = array('January','February ','March','April','May','June','Jully','July','August','September','October','November','December');
 $Dweek = array(
@@ -17,9 +18,7 @@ $Dweek = array(
     'Sunday' => 'Sun',
 );
 $date = array(date('j'),date('F'),date('Y'),date('d')) ;
-$days = ;
-$dataMont = ;
-$nowYear =;
+$dataMont  = Null;
 $f = 0;
 
 ?>
@@ -40,18 +39,19 @@ $f = 0;
     <ul>
 
         <ul>
-            <li class="prev"  <?php
-              $nowMonth = $dataMont;
-                if($numValid == 90) {
-                  $nowMonth = $dataMont;
-              }else {
-                for ($i = 0;$i < 12 ;$i++){
+            <li class="prev"  ><input type="button"  <?php
 
-                    if($Month[$i] == $nowMonth) {
-                        $nowMonth = $Month[$i - 1];
-                    }
-                }}
-                ?>>&#10094;</li>
+                $nowMonth = $dataMont;
+                if($numValid == 90) {
+                    $nowMonth = $dataMont;
+                }else {
+                    for ($i = 0;$i < 12 ;$i++){
+
+                        if($Month[$i] == $nowMonth) {
+                            $nowMonth = $Month[$i - 1];
+                        }
+                    }}
+                ?>></li>
 
             <?php echo $nowMonth ?><br>
             <span style="font-size:18px"><?php echo $nowYear ?></span>
@@ -71,6 +71,7 @@ $f = 0;
            } ;
 
         ?>
+
 
 
 </ul>
