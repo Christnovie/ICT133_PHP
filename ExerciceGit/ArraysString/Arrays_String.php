@@ -18,7 +18,13 @@ $Dweek = array(
     'Sunday' => 'Sun',
 );
 $date = array(date('j'),date('F'),date('Y'),date('d')) ;
+<<<<<<< Updated upstream
 $dataMont  = Null;
+=======
+$days ;
+
+$nowYear = $date[2] ;
+>>>>>>> Stashed changes
 $f = 0;
 
 ?>
@@ -39,6 +45,7 @@ $f = 0;
     <ul>
 
         <ul>
+<<<<<<< Updated upstream
             <li class="prev"  ><input type="button"  <?php
 
                 $nowMonth = $dataMont;
@@ -52,6 +59,15 @@ $f = 0;
                         }
                     }}
                 ?>></li>
+=======
+            <li class="prev"  <?php
+              for($f = 0;$f < sizeof($Month);$f++) {
+                  if($Month[$f] == $date[2]){
+                      $nowMonth = $Month[$f];
+                  }
+              }
+                ?>>&#10094;</li>
+>>>>>>> Stashed changes
 
             <?php echo $nowMonth ?><br>
             <span style="font-size:18px"><?php echo $nowYear ?></span>
