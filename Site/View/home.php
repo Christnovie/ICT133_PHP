@@ -9,11 +9,12 @@
 /** tampon de fliux stockéen mémoire */
 
 ob_start();
-$titre = "Rent a show - Acceuille";
+$titre = "Rent a show - Acceuil";
 ?>
 
 
 <div class="span12" id="divMain">
+
     <h1>Nos activités</h1>
 
     <p><strong>Rent A Snow</strong> est spécialisée dans la location de snows. Nous avons tout types de

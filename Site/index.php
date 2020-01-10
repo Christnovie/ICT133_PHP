@@ -14,6 +14,12 @@ if(isset($_GET['action'])){
         case 'home' :
             home();
             break;
+        case 'login':
+            login();
+            break;
+        case 'produit' :
+            produit();
+            break;
         case 'contact' :
             contact();
             break;

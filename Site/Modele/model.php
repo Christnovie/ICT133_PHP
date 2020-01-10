@@ -6,3 +6,18 @@
  *Initial version created on : 06.01.2020
  *Time : 15:02
  */
+
+
+/**
+ * function for check a validity of password
+ * @param $password
+ * @return bool
+ */
+
+function checklogin($password){
+    if($password == 1234)
+        return true;
+        else
+            return false;
+    
+}
