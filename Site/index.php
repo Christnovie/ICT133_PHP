@@ -8,25 +8,28 @@
  */
 
 require "controler/controler.php";
-if(isset($_GET['action'])){
+if (isset($_GET['action'])) {
     $action = $_GET['action'];
-    switch($action){
+    switch ($action) {
         case 'home' :
             home();
             break;
         case 'login':
-            login();
+            login($_POST);
             break;
         case 'produit' :
             produit();
+            break;
+        case 'deconnexion' :
+            deconnect();
             break;
         case 'contact' :
             contact();
             break;
         default :
-            home() ;
+            home();
     }
-}else{
+} else {
     home();
 
 }

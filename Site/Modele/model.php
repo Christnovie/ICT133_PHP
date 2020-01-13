@@ -14,10 +14,11 @@
  * @return bool
  */
 
-function checklogin($password){
-    if($password == 1234)
+function checklogin($password)
+{
+    if (@$password['pwd'] == 1234)
         return true;
-        else
-            return false;
-    
+    else
+        return false;
+
 }

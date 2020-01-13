@@ -12,7 +12,6 @@ $titre = "Rent a show - Acceuil";
 ?>
 
 
-
 <?php
 $content = ob_get_clean();
 require 'gabarit.php';

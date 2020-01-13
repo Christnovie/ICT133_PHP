@@ -22,7 +22,8 @@
     <link href="View/Content/scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet"
           type="text/css"/>
     <!--[if lt IE 8]>
-    <link href="View/Content/scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet"
+    <link href="View/Content/scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen"
+          rel="stylesheet"
           type="text/css"/>
     <link href="View/Content/scripts/icons/social/stylesheets/social_foundicons_ie7.css" media="screen" rel="stylesheet"
           type="text/css"/>
@@ -66,34 +67,47 @@
                                 data-toggle="collapse" data-target=".nav-collapse">
                             NAVIGATION <span class="icon-chevron-down icon-white"></span>
                         </button>
+                        <p><?= $_SESSION['login'] ?></p>
                         <div class="nav-collapse collapse">
+
                             <ul class="nav nav-pills ddmenu">
 
 
-                                <li<?php if(($_GET['action']=='home') || (!isset($_GET['action'])) ) :  ?>
-                                class="active"
+                                <li<?php if (($_GET['action'] == 'home') || (!isset($_GET['action']))) : ?>
+                                    class="active"
                                 <?php endif ?>
-                                ><a href="../index.php">Accueil</a></li>
+                                ><a href="index.php?action=home">Accueil</a></li>
 
 
-                                 <li<?php if(($_GET['action']=='login') || (!isset($_GET['action'])) ): ?>
-                                     class="active"
+                                <li<?php if (($_GET['action'] == 'login') || ($_GET['action'] == 'resultLogin') || (!isset($_GET['action']))): ?>
+                                    class="active"
                                 <?php endif ?>><a href="index.php?action=login">Login</a></li>
 
 
-                                <li <?php if(($_GET['action']=='produit') || (!isset($_GET['action'])) ): ?>
+                                <li <?php if (($_GET['action'] == 'produit') || (!isset($_GET['action']))): ?>
                                     class="active"
                                 <?php endif ?>
                                 ><a href="index.php?action=produit">Produit</a></li>
 
 
-                                <li<?php if(($_GET['action']=='contact') || (!isset($_GET['action'])) ): ?>
+                                <li<?php if (($_GET['action'] == 'contact') || (!isset($_GET['action']))): ?>
                                     class="active"
                                 <?php endif ?>
                                 ><a href="index.php?action=contact">contact</a></li>
+                                <li class="dropdown"<?php if ($_GET['action'] == 'resultLogin' || ($_SESSION['login']) != ""): ?>
+                                    style="display: "
+                                <?php else : ?>
+                                    style="display: none "
+                                <?php endif ?>>
 
+                                    <a class="dropdown-toggle">Autre <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.php?action=deconnexion">deconnexion</a></li>
 
+                                    </ul>
+                                </li>
                             </ul>
+
                         </div>
                     </div>
                 </div>
@@ -105,24 +119,24 @@
             <div class="span12">
 
                 <div id="headerSeparator"></div>
-                <?php if(($_GET['action']=='home') || (!isset($_GET['action'])) ): ?>
-                <div class="camera_full_width">
-                    <div id="camera_wrap">
-                        <div data-src="View/Content/slider-images/4.jpg">
-                            <div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à
-                                disposition.
+                <?php if (($_GET['action'] == 'home') || (!isset($_GET['action']))): ?>
+                    <div class="camera_full_width">
+                        <div id="camera_wrap">
+                            <div data-src="View/Content/slider-images/4.jpg">
+                                <div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à
+                                    disposition.
+                                </div>
                             </div>
-                        </div>
-                        <div data-src="View/Content/slider-images/1.jpg">
-                            <div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des
-                                sensations.
+                            <div data-src="View/Content/slider-images/1.jpg">
+                                <div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des
+                                    sensations.
+                                </div>
                             </div>
+                            <div data-src="View/Content/slider-images/2.jpg"></div>
                         </div>
-                        <div data-src="View/Content/slider-images/2.jpg"></div>
+                        <br style="clear:both"/>
+                        <div style="margin-bottom:40px"></div>
                     </div>
-                    <br style="clear:both"/>
-                    <div style="margin-bottom:40px"></div>
-                </div>
                 <?php endif ?>
                 <div id="headerSeparator2"></div>
 
@@ -138,7 +152,7 @@
             <div class="row-fluid">
                 <!--Edit Main Content Area here-->
                 <?= $content ?>
-            
+
                 <!--End Main Content-->
             </div>
 
