@@ -21,7 +21,7 @@ $date = array(date('j'),date('F'),date('Y'),date('d')) ;
 
 
 
-$days ;
+$nowMonth = $date[1];
 
 $nowYear = $date[2] ;
 
@@ -46,28 +46,12 @@ $f = 0;
 
         <ul>
 
-            <li class="prev"  ><input type="button"  <?php
+            <li class="prev"  >
 
-                $nowMonth = $dataMont;
-                if($numValid == 90) {
-                    $nowMonth = $dataMont;
-                }else {
-                    for ($i = 0;$i < 12 ;$i++){
+                </li>
 
-                        if($Month[$i] == $nowMonth) {
-                            $nowMonth = $Month[$i - 1];
-                        }
-                    }}
-                ?>></li>
-=======
-            <li class="prev"  <?php
-              for($f = 0;$f < sizeof($Month);$f++) {
-                  if($Month[$f] == $date[2]){
-                      $nowMonth = $Month[$f];
-                  }
-              }
-                ?>>&#10094;</li>
->>>>>>> Stashed changes
+            <li class="prev" >&#10094;</li>
+
 
             <?php echo $nowMonth ?><br>
             <span style="font-size:18px"><?php echo $nowYear ?></span>
@@ -95,7 +79,7 @@ $f = 0;
 <ul class="days">
 <?php
 $numValid = 1;
-    for($i = 1;$i <= 35;$i++){
+    for($i = 1;$i <= 31;$i++){
 
         if($i == $days){
             echo"<li><span class='active'>$i</span></li>";

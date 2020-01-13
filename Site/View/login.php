@@ -19,8 +19,8 @@ $titre = "Rent a show - Acceuil";
         <input type="password" id="password" name="pwd" placeholder="Enter password" value="" required>
         <output typeof="a"></output>
         <br>
-        <input type="submit" name="log" value="Login"><input type="reset" value="Reset">
-
+        <input type="submit" name="log" value="Login"><input type="reset" value="Reset"><br>
+        Pas encore de login?<input type="button" href="index.php?action=inscription" name="registerUser" value="Register">
     </form>
 </div>
 

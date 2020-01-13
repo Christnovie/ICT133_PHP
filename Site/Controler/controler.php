@@ -39,11 +39,15 @@ function login($loginregister)
     }
 
 }
+function register(){
 
+}
 function deconnect()
 {
     $_GET['action'] = "login";
     $_SESSION['login'] = "";
+    session_unset();
+    session_destroy();
     require "View/login.php";
 }
 
