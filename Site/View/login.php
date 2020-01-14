@@ -20,7 +20,7 @@ $titre = "Rent a show - Acceuil";
         <output typeof="a"></output>
         <br>
         <input type="submit" name="log" value="Login"><input type="reset" value="Reset"><br>
-        Pas encore de login?<input type="button" href="index.php?action=inscription" name="registerUser" value="Register">
+        Pas encore membre?          <a href="index.php?action=registry">Register </a>
     </form>
 </div>
 

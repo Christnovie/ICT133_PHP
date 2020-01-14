@@ -20,7 +20,7 @@ function home()
 
 /**
  *function for login
- * @param $loginregist *containt all data of login
+ * @param $loginregister *containt all data of login
  */
 function login($loginregister)
 {
@@ -39,9 +39,26 @@ function login($loginregister)
     }
 
 }
-function register(){
 
+/**
+ *function for create user
+ * @param $dataUser
+ */
+function register($dataUser)
+{
+    $_GET['action'] = "login";
+    if (isset($dataUser['createUser'])) {
+        $_GET['action'] = "login";
+        creatUser($dataUser);
+        require "View/login.php";
+    } else {
+        require "View/userCreate.php";
+    }
 }
+
+/**
+ *function for logout to session
+ */
 function deconnect()
 {
     $_GET['action'] = "login";

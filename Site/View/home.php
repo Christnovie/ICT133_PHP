@@ -38,11 +38,11 @@ $titre = "Rent a show - Acceuil";
     ?>
 
 
-    <html lang="en">
+
     <head>
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="../View/Content/scripts/bootstrap/css/arraysStringCSS.css">
+        <link rel="stylesheet" type="text/css" href="View/Content/scripts/bootstrap/css/arraysStringCSS.css">
     </head>
     <body>
 

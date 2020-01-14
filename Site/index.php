@@ -26,8 +26,8 @@ if (isset($_GET['action'])) {
         case 'contact' :
             contact();
             break;
-        case 'inscription' :
-            register();
+        case 'registry' :
+            register($_POST);
             break;
 
         default :

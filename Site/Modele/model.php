@@ -16,9 +16,37 @@
 
 function checklogin($password)
 {
-    if (@$password['pwd'] == 1234)
+    $current_file = file_get_contents("Modele/userDatabase.json");
+    $parsed = json_decode($current_file);
+    foreach ($parsed as $item => $val) {
+        if ($parsed[$val]->User == @$password['inputUsername']) {
+            $i = $val;
+        }
+    }
+
+
+    if (@$password['pwd'] == $parsed[$i]->Password && @$password['inputUsername'] == $parsed[$i]->User)
         return true;
     else
         return false;
 
+
+}
+
+/**
+ * function for create a user and write to json file the user data
+ * @param $userData
+ */
+function creatUser($userData)
+{
+    $current_file = file_get_contents('Modele/userDatabase.json');
+    $array_data = json_decode($current_file, true);
+    $association = array(
+        'User' => $userData['createUser'],
+        'Password' => $userData['createpwd']
+
+    );
+    $array_data[] = $association;
+    $inputed_data = json_encode($array_data);
+    file_put_contents('Modele/userDatabase.json', $inputed_data);
 }
