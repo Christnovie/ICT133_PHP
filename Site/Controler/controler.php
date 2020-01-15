@@ -49,8 +49,11 @@ function register($dataUser)
     $_GET['action'] = "login";
     if (isset($dataUser['createUser'])) {
         $_GET['action'] = "login";
-        creatUser($dataUser);
+
+        if(creatUser($dataUser))
         require "View/login.php";
+        else
+            require "View/userCreate.php";
     } else {
         require "View/userCreate.php";
     }

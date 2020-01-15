@@ -27,26 +27,38 @@ function checklogin($password)
 
         }
     }
+}
 
-
-
+/**
+ *function for reading a json file of snow database
+ */
+function snowsDatabase()
+{
 
 }
 
 /**
  * function for create a user and write to json file the user data
  * @param $userData /*user register data name + password
+ * @return bool
  */
 function creatUser($userData)
 {
-    $current_file = file_get_contents('Modele/userDatabase.json');
-    $array_data = json_decode($current_file, true);
-    $association = array(
-        'User' => $userData['createUser'],
-        'Password' => $userData['createpwd']
 
-    );
-    $array_data[] = $association;
-    $inputed_data = json_encode($array_data);
-    file_put_contents('Modele/userDatabase.json', $inputed_data);
+
+            $current_file = file_get_contents('Modele/userDatabase.json');
+            $array_data = json_decode($current_file, true);
+            $association = array(
+                'User' => $userData['createUser'],
+                'Password' => $userData['createpwd']
+
+            );
+            $array_data[] = $association;
+            $inputed_data = json_encode($array_data);
+            if (file_put_contents('Modele/userDatabase.json', $inputed_data)) {
+                return true;
+            } else {
+                return false;
+            }
+
 }
