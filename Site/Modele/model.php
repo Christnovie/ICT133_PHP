@@ -34,7 +34,10 @@ function checklogin($password)
  */
 function snowsDatabase()
 {
-
+    $current_file = file_get_contents("Modele/snowData.json");
+    $parsed_snowData = json_decode($current_file);
+    $array_data[] = $parsed_snowData;
+    return $array_data;
 }
 
 /**
@@ -62,3 +65,5 @@ function creatUser($userData)
             }
 
 }
+
+

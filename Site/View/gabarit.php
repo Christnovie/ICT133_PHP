@@ -67,7 +67,7 @@
                                 data-toggle="collapse" data-target=".nav-collapse">
                             NAVIGATION <span class="icon-chevron-down icon-white"></span>
                         </button>
-                        <p><?= 'connecté en tant que ', $_SESSION['login'] ?></p>
+                        <h1 class=""><?= 'connecté en tant que ', $_SESSION['login'] ?></h1>
                         <div class="nav-collapse collapse">
 
                             <ul class="nav nav-pills ddmenu">

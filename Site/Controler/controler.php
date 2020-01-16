@@ -77,6 +77,9 @@ function deconnect()
 function produit()
 {
     $_GET['action'] = "produit";
+
+    $produit_content = snowsDatabase();
+    $_GET['prContent'] =$produit_content;
     require "View/produit.php";
 }
 

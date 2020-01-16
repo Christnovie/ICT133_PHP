@@ -1,7 +1,17 @@
 [
   {
-    "id":"1",
+    "id": "1",
     "name": "Burton",
-    "image": "View/Content/snow-image/bundle_690488.jpg"
+    "image": "View/Content/snow-image/snow4.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Everton",
+    "image": "View/Content/snow-image/snow1.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Skarfox",
+    "image": "View/Content/snow-image/snow2.jpg"
   }
 ]

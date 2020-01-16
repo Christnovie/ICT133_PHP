@@ -10,7 +10,22 @@
 ob_start();
 $titre = "Rent a show - Acceuil";
 ?>
+    <h1> Snowboard shop </h1>
+    <div class="table">
+        <table >
+            <tr>
 
+                <?php
+                foreach ($_GET['prContent'] as $item) {
+                    foreach ($item as $value) {
+                        echo '<td><a href=""><img src=" ' . $value->image . '  ">', " <br> ", $value->name, "", "</a></td>               ";
+
+                    }
+                }
+                ?>
+            </tr>
+        </table>
+    </div>
 
 <?php
 $content = ob_get_clean();
