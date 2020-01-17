@@ -18,7 +18,7 @@ $titre = "Rent a show - Acceuil";
         <label>Email</label>
         <input type="email" id="" name="createEmail"   placeholder="input your email" value=""  required><br>
         <label>Password</label>
-        <input type="password" id="createpwd" name="createpwds" placeholder="Enter new password" value="" minlength="8"   required>
+        <input type="password" id="createpwds" name="createpwd" placeholder="Enter new password" value="" minlength="8"   required>
         <label>Confirme password</label>
         <input type="password" id="confirmepwds" name="confirmepwd" placeholder="Enter password" value="" minlength="8"  required>
 
@@ -26,24 +26,10 @@ $titre = "Rent a show - Acceuil";
         <button type="submit" id="registered" name="register">Register </button><input type="reset" value="Reset"><br>
        Déjà membre?          <a href="index.php?action=login">Login </a>
     </form>
-    <?php $error =''; ?>
+    <?php $error = $_GET['errorConfirme']; echo $error ?>
 </div>
 
-<script>
-    var passwords = document.getElementById("createpwd");
-    var confirm_passwords = document.getElementById("confirmepwd");
 
-    function validatePassword(){
-        if(passwords.value !== confirm_passwords.value) {
-            confirm_passwords.setCustomValidity("Passwords Don't Match");
-        } else {
-            confirm_passwords.setCustomValidity('');
-        }
-    }
-
-    passwords.onchange = validatePassword;
-    confirm_passwords.onkeyup = validatePassword;
-</script>
 <?php
 
 
