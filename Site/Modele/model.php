@@ -19,8 +19,8 @@ function checklogin($password)
     $current_file = file_get_contents("Modele/userDatabase.json");
     $parsed = json_decode($current_file);
     foreach ($parsed as $item => $value) {
-        if ($value->User == @$password['inputUsername']) {
-            if (@$password['pwd'] == $value->Password && @$password['inputUsername'] == $value->User)
+        if ($value->User == @$password['inputUsername'] || $value->Email == @$password['inputUsername']) {
+            if (@$password['pwd'] == $value->Password && (@$password['inputUsername'] == $value->User || @$password['inputUsername'] == $value->Email))
                 return true;
             else
                 return false;
@@ -49,11 +49,13 @@ function creatUser($userData)
 {
 
 
+
             $current_file = file_get_contents('Modele/userDatabase.json');
             $array_data = json_decode($current_file, true);
             $association = array(
                 'User' => $userData['createUser'],
-                'Password' => $userData['createpwd']
+                'Password' => $userData['createpwd'],
+                'Email' => $userData['createEmail']
 
             );
             $array_data[] = $association;
@@ -63,6 +65,7 @@ function creatUser($userData)
             } else {
                 return false;
             }
+
 
 }
 

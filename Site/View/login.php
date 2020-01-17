@@ -14,7 +14,7 @@ $titre = "Rent a show - Acceuil";
     <h1>Login</h1><br>
     <form action="index.php?action=login" id="formulaireLogin" method="post">
         <label>Username</label>
-        <input type="text" id="username" name="inputUsername" placeholder="input your username" value="" required><br>
+        <input type="text" id="username" name="inputUsername" placeholder="input your username or email" value="" required><br>
         <label>Password</label>
         <input type="password" id="password" name="pwd" placeholder="Enter password" value="" required>
         <output typeof="a"></output>

@@ -12,22 +12,42 @@ $titre = "Rent a show - Acceuil";
 ?>
 <div>
     <h1>Register</h1><br>
-    <form action="index.php?action=registry" id="formulaireRegister"  method="post">
+    <form action="index.php?action=registry" id="formulaireRegister" name="formRegister"  method="post">
         <label>Username</label>
-        <input type="text" id="" name="createUser" placeholder="input your username" value="" minlength="4" required><br>
+        <input type="text" id="" name="createUser"   placeholder="input your username" value="" minlength="4" required><br>
+        <label>Email</label>
+        <input type="email" id="" name="createEmail"   placeholder="input your email" value=""  required><br>
         <label>Password</label>
-        <input type="password" id="" name="createpwd" placeholder="Enter password" value="" minlength="8"  required>
+        <input type="password" id="createpwd" name="createpwds" placeholder="Enter new password" value="" minlength="8"   required>
+        <label>Confirme password</label>
+        <input type="password" id="confirmepwds" name="confirmepwd" placeholder="Enter password" value="" minlength="8"  required>
 
         <br>
-        <input type="submit" name="register" value="Register"><input type="reset" value="Reset"><br>
+        <button type="submit" id="registered" name="register">Register </button><input type="reset" value="Reset"><br>
        Déjà membre?          <a href="index.php?action=login">Login </a>
     </form>
+    <?php $error =''; ?>
 </div>
 
+<script>
+    var passwords = document.getElementById("createpwd");
+    var confirm_passwords = document.getElementById("confirmepwd");
 
+    function validatePassword(){
+        if(passwords.value !== confirm_passwords.value) {
+            confirm_passwords.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_passwords.setCustomValidity('');
+        }
+    }
+
+    passwords.onchange = validatePassword;
+    confirm_passwords.onkeyup = validatePassword;
+</script>
 <?php
 
-$content = ob_get_clean();
-require 'gabarit.php';
 
+
+    $content = ob_get_clean();
+    require 'gabarit.php';
 ?>
