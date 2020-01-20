@@ -72,12 +72,9 @@ $titre = "Rent a show - Acceuil";
     <ul class="weekdays">
 
         <?php
-
         foreach ($Dweek as $item ){
             echo "<li>$item</li>";
-
         } ;
-
         ?>
 
 

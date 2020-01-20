@@ -1,17 +1,12 @@
 [
   {
-    "User": "cspoutnick@gmail.com",
-    "Password": null,
-    "Email": "cspoutnick@gmail.com"
+    "User": "chris",
+    "Password": "12345678",
+    "Email": "chrisnovie@gmail.com"
   },
   {
-    "User": "AADDF",
-    "Password": null,
-    "Email": "ADADA@AHPIAH.PJ"
-  },
-  {
-    "User": "cspoutnick@gmail.com",
-    "Password": null,
-    "Email": "cspoutnick@gmail.com"
+    "User": "teste",
+    "Password": "password",
+    "Email": "teste@gamil.com"
   }
 ]

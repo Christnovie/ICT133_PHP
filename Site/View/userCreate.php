@@ -26,7 +26,7 @@ $titre = "Rent a show - Acceuil";
         <button type="submit" id="registered" name="register">Register </button><input type="reset" value="Reset"><br>
        Déjà membre?          <a href="index.php?action=login">Login </a>
     </form>
-    <?php $error = $_GET['errorConfirme']; echo $error ?>
+    <?php  echo $_GET['errorConfirme']?>
 </div>
 
 

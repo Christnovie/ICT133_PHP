@@ -46,9 +46,11 @@ function login($loginregister)
  */
 function register($dataUser)
 {
+    $erroreConfirme = "";
+     $_GET['errorPassword'] = $erroreConfirme ;
     $_GET['action'] = "login";
     if (isset($dataUser['createUser'])) {
-       if($dataUser['createpwd'] == $dataUser['confirmepwds']) {
+       if($dataUser['createpwd'] == $dataUser['confirmepwd']) {
            $_GET['action'] = "login";
            $_GET['errorConfirme'] = '';
            if (creatUser($dataUser))
@@ -56,10 +58,12 @@ function register($dataUser)
            else
                require "View/userCreate.php";
        }else
+           $_GET['errorConfirme'] = 'password no match';
            require "View/userCreate.php";
-            $_GET['errorConfirme'] = 'Password not match';
+
     } else {
         require "View/userCreate.php";
+
     }
 }
 
