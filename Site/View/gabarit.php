@@ -51,7 +51,7 @@
 
     <div class="transparent-bg"
          style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;zoom: 1;"></div>
-
+<!-- edit healder page-->
     <div class="divPanel notop nobottom">
         <div class="row-fluid">
             <div class="span12">
@@ -143,6 +143,7 @@
             </div>
         </div>
     </div>
+    <!-- end healder -->
 
     <div class="contentArea">
 

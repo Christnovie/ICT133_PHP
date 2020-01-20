@@ -5,11 +5,13 @@
  *Initial version by: Christnovie.KIALA-BI
  *Initial version created on : 09.12.2019
  */
-
+/**  */
 date_default_timezone_set('UTC');
-$Month = array('January','February ','March','April','May','June','Jully','July','August','September','October','November','December');
+/** @var TYPE_NAME $Month this array content all month of year and count for the month */
+$Month = array('January' => 31, 'February ' => 28, 'March' => 31, 'April' => 30, 'May' => 31, 'June' => 30, 'July' => 31, 'August' => 31, 'September' => 30, 'October' => 31, 'November' => 30, 'December' => 31);
+/** @var TYPE_NAME $Dweek this array content days + abbreviation of week */
 $Dweek = array(
-        'Monday' => 'Mon',
+    'Monday' => 'Mon',
     'Tuesday' => 'Tue',
     'Wednesday' => 'Wed',
     'Thursday' => 'Thu',
@@ -17,13 +19,12 @@ $Dweek = array(
     'Saturday' => 'Sat',
     'Sunday' => 'Sun',
 );
-$date = array(date('j'),date('F'),date('Y'),date('d')) ;
-
+$date = array(date('j'), date('F'), date('Y'), date('d'));
 
 
 $nowMonth = $date[1];
 
-$nowYear = $date[2] ;
+$nowYear = $date[2];
 
 $f = 0;
 
@@ -34,7 +35,7 @@ $f = 0;
 <head>
     <meta charset="UTF-8">
     <title>Date</title>
-    <link rel="stylesheet" type="text/css" href="arraysStringCSS.css">
+    <link rel="stylesheet" type="text/css" href="../../Site/View/Content/scripts/bootstrap/css/arraysStringCSS.css">
 </head>
 <body>
 
@@ -46,11 +47,11 @@ $f = 0;
 
         <ul>
 
-            <li class="prev"  >
+            <li class="prev">
 
-                </li>
+            </li>
 
-            <li class="prev" >&#10094;</li>
+            <li class="prev">&#10094;</li>
 
 
             <?php echo $nowMonth ?><br>
@@ -63,36 +64,33 @@ $f = 0;
 
 <ul class="weekdays">
 
-        <?php
+    <?php
 
-           foreach ($Dweek as $item ){
-                echo "<li>$item</li>";
+    foreach ($Dweek as $item) {
+        echo "<li>$item</li>";
 
-           } ;
+    };
 
-        ?>
-
+    ?>
 
 
 </ul>
 
 <ul class="days">
-<?php
-$numValid = 1;
-    for($i = 1;$i <= 31;$i++){
+    <?php
+    $numValid = 1;
+    for ($i = 1; $i <= 31; $i++) {
 
-        if($i == $days){
-            echo"<li><span class='active'>$i</span></li>";
+        if ($i == $days) {
+            echo "<li><span class='active'>$i</span></li>";
             $numValid++;
-        }
-        else
+        } else
 
-            echo"<li>$i</li>";
+            echo "<li>$i</li>";
 
 
     }
-?>
-
+    ?>
 
 
 </ul>

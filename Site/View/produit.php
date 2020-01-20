@@ -17,6 +17,7 @@ $titre = "Rent a show - Acceuil";
             <tr>
 
                 <?php
+                /** @var  $item  *reading into the array and pin up data of snow with information */
                 foreach ($_GET['prContent'] as $item) {
                     foreach ($item as $value) {
                         echo '<td ><a href=""><img src=" ' . $value->image . '  ">', " <br> ", $value->name, "", "</a></td>               ";
@@ -29,6 +30,7 @@ $titre = "Rent a show - Acceuil";
     </div>
 
 <?php
+
 $content = ob_get_clean();
 require 'gabarit.php';
 

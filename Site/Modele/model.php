@@ -16,8 +16,15 @@
 
 function checklogin($password)
 {
+    /** @var  $current_file * transform data of json file to variable php */
     $current_file = file_get_contents("Modele/userDatabase.json");
+    /** affected @var $parsed * with decoding of content of @var $current_file  */
     $parsed = json_decode($current_file);
+    /**
+     * @var  $item *index element database
+     * @var  $value *element for index
+     * through all json file for  verified and determine if the login is correct
+     */
     foreach ($parsed as $item => $value) {
         if ($value->User == @$password['inputUsername'] || $value->Email == @$password['inputUsername']) {
             if (@$password['pwd'] == $value->Password && (@$password['inputUsername'] == $value->User || @$password['inputUsername'] == $value->Email))
@@ -34,10 +41,13 @@ function checklogin($password)
  */
 function snowsDatabase()
 {
+    /** @var  $current_file * transform data of json file to variable php */
     $current_file = file_get_contents("Modele/snowData.json");
+    /** affected @var $parsed_snowData * with decoding of content of @var $current_file  */
     $parsed_snowData = json_decode($current_file);
+    /** @var $array_data * this array content element of snowDatabase  */
     $array_data[] = $parsed_snowData;
-    return $array_data;
+    return $array_data;/** return a snow element  */
 }
 
 /**
@@ -49,9 +59,11 @@ function creatUser($userData)
 {
 
 
-
+            /** @var  $current_file * transform data of json file to variable php */
             $current_file = file_get_contents('Modele/userDatabase.json');
+            /** affected @var $array_data * with decoding of content of @var $current_file  */
             $array_data = json_decode($current_file, true);
+            /** @var  $association * this  array synchronizes a data inputed by user with json file  */
             $association = array(
                 'User' => $userData['createUser'],
                 'Password' => $userData['createpwd'],
@@ -59,7 +71,9 @@ function creatUser($userData)
 
             );
             $array_data[] = $association;
+            /** @var  $inputed_data * transform variable content to json file */
             $inputed_data = json_encode($array_data);
+            /**verified if it can write into the json file */
             if (file_put_contents('Modele/userDatabase.json', $inputed_data)) {
                 return true;
             } else {
