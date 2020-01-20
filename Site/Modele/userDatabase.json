@@ -2,11 +2,14 @@
   {
     "User": "chris",
     "Password": "12345678",
-    "Email": "chrisnovie@gmail.com"
+    "Email": "chrisnovie@gmail.com",
+    "admin": true
   },
   {
     "User": "teste",
     "Password": "password",
-    "Email": "teste@gamil.com"
+    "Email": "teste@gamil.com",
+    "admin": false
+
   }
 ]
