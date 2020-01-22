@@ -9,7 +9,7 @@
 date_default_timezone_set('UTC');
 
 /** @var TYPE_NAME $Month this array content all month of year and count for the month */
-$Month = array('January' => 31, 'February ' => 28, 'March' => 31, 'April' => 30, 'May' => 31, 'June' => 30, 'July' => 31, 'August' => 31, 'September' => 30, 'October' => 31, 'November' => 30, 'December' => 31);
+$Month = array( 'January' => 31, 'February ' => 28, 'March' => 31, 'April' => 30, 'May' => 31, 'June' => 30, 'July' => 31, 'August' => 31, 'September' => 30, 'October' => 31, 'November' => 30, 'December' => 31);
 /** @var TYPE_NAME $Dweek this array content days + abbreviation of week */
 $Dweek = array(
     'Monday' => 'Mon',
@@ -20,26 +20,49 @@ $Dweek = array(
     'Saturday' => 'Sat',
     'Sunday' => 'Sun',
 );
-$date = array(date('j'), date('F'), date('Y'), date('d'));
-if(isset($_GET['month']))
-    $currentMonth = $date[1];
-else
+/** @var TYPE_NAME $date */
+$date = array(date('j'), date('n'), date('Y'), date('D'));
+/** @var TYPE_NAME $current_date */
+$current_date = $date[0];
+if (isset($_GET['month'])) {
     $currentMonth = $_GET['month'];
-if(isset($_GET['year']))
-    $currentYear = $date[2];
-else
+    echo $currentMonth;
+} else {
+    $currentMonth = $date[1];
+    $_GET['month'] = $currentMonth;
+    echo $currentMonth;
+}
+if (isset($_GET['year'])) {
     $currentYear = $_GET['year'];
-$first_daysMont = date("w", mktime(0, 0, 0, $currentMonth, 1, $currentYear));
-$int_nbjAV = date("t", mktime(0, 0, 0, ($currentMonth - 1 < 1) ? 12 : $currentMonth - 1, 1, $currentYear)); // nb de jours du moi d'avant
-$int_nbjAP = date("t", mktime(0, 0, 0, ($currentMonth + 1 > 12) ? 1 : $currentMonth + 1, 1, $currentYear)); // b de jours du mois d'apres
-foreach ($Month as  $item => $value){
-    if($item == $_GET['mois'] ){
-        $nbDays =  $value;
+    echo $currentMonth;
+} else {
+    $currentYear = $date[2];
+    $_GET['year'] = $currentYear;
+    echo $currentMonth;
+}
+if ($currentMonth < 1) {
+    $currentMonth = 12;
+    $currentYear = $currentYear - 1;
+    echo $currentMonth;
+} elseif ($currentMonth > 12) {
+    $currentMonth = 1;
+    $currentYear = $currentYear + 1;
+    echo $currentMonth;
+}
+foreach ($date as $item) {
+    echo $item, ' ' ,$currentMonth,' ';
+}
+$choseMont = date("F", mktime(0, 0, 0, $currentMonth, 0, 0));
+echo $choseMont;
+$first_daysMont = date("w", mktime(0, 0, 0, $_GET['month'], 1, $_GET['year']));
+
+foreach ($Month as $item => $value) {
+    if ($item == $choseMont) {
+        $nbDays = $value;
     }
 }
-
-
-
+/**echo "<br>", $current_date, $choseMont, $currentYear, $nbDays;
+*/
 
 ?>
 <!DOCTYPE html >
@@ -61,14 +84,15 @@ foreach ($Month as  $item => $value){
         <ul>
 
 
-
             <li class="prev"><a
-                        href="Arrays_String.php?mois=<?php echo $currentMonth - 1; ?>&amp;annee=<?php echo $currentYear; ?>"></a>&nbsp;&nbsp;<?php echo $tab_mois[$currentMonth]; ?>
-                &nbsp;&nbsp;<a></li>
+                        href="Arrays_String.php?month=<?php echo $currentMonth - 1; ?>,year=<?php echo $currentYear; ?>">
+                    <button value="Precedent"></button>
+                </a>&nbsp;&nbsp;
+            </li>
 
 
-            <?php ?><br>
-            <span style="font-size:18px"><?php  ?></span>
+            <?php echo $choseMont ?><br>
+            <span style="font-size:18px"><?php ?></span>
             <li class="next">&#10095;</li>
         </ul>
 
@@ -91,17 +115,20 @@ foreach ($Month as  $item => $value){
 
 <ul class="days">
     <?php
-    $numValid = 1;
-    for ($i = 1; $i <= 31; $i++) {
+    $num_date = 0;
+    for ($i = 1; $i <= $nbDays + $first_daysMont - 1; $i++) {
+        if ($i < $first_daysMont) {
+            echo "<li> </li>";
+        } else {
+            $num_date++;
+            if ($num_date == $current_date) {
 
-        if ($i == $days) {
-            echo "<li><span class='active'>$i</span></li>";
-            $numValid++;
-        } else
+                echo "<li><span class='active'> $num_date </span></li>";
 
-            echo "<li>$i</li>";
+            } else
+                echo "<li>$num_date</li>";
 
-
+        }
     }
     ?>
 

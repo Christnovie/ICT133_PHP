@@ -10,6 +10,10 @@
     "Password": "password",
     "Email": "teste@gamil.com",
     "admin": false
-
+  },
+  {
+    "User": "caca",
+    "Password": "12345678",
+    "Email": "cspoutnick@gmail.com"
   }
 ]
