@@ -10,6 +10,8 @@
 require "controler/controler.php";
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
+    $element = $_GET['element'];
+    $email = $_GET['sendMessage'];
     switch ($action) {
         case 'home' :
             home();
@@ -24,10 +26,16 @@ if (isset($_GET['action'])) {
             deconnect();
             break;
         case 'contact' :
-            contact();
+            contact($_POST);
             break;
         case 'registry' :
             register($_POST);
+            break;
+        case 'item' :
+            item($element);
+            break;
+        case 'email' :
+            email($email);
             break;
 
         default :

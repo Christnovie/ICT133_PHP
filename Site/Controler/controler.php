@@ -30,6 +30,7 @@ function login($loginregister)
         if (checklogin($loginregister)) {
 
             $_SESSION['login'] = $_POST['inputUsername'];
+            $_SESSION['userEmail'] = $_GET['userEmail'];
             $_GET['action'] = "resultLogin";
             require "View/resultLogin.php";
         } else
@@ -53,8 +54,10 @@ function register($dataUser)
        if($dataUser['createpwd'] == $dataUser['confirmepwd']) {
            $_GET['action'] = "login";
            $_GET['errorConfirme'] = '';
-           if (creatUser($dataUser))
+           if (creatUser($dataUser)) {
+               createItemSession($dataUser);
                require "View/login.php";
+           }
            else
                require "View/userCreate.php";
        }else
@@ -93,9 +96,43 @@ function produit()
 
 /**
  *function for contact
+ * @param $_post
  */
-function contact()
+function contact($_post)
 {
     $_GET['action'] = "contact";
+    $_GET['sendMessage'] = $_post;
     require "View/contact.php";
+}
+function email($emailData){
+    $_GET['action'] = "contact";
+
+    mail("cspoutnick@gmail.com \n",$emailData['email'],"test \n",$emailData['message']);
+    require "View/contact.php";
+}
+
+/**
+ * function for add item in json
+ * @param $item
+ */
+function addshop($item){
+    $_GET['action']="item";
+    if(isset($item)){
+        addItem($item);
+        $_GET['element'] = "";
+
+    }
+
+
+    require "View/item.php";
+}
+/**
+ *function for item shop
+ * @param $item
+ */
+function item($item){
+    $_GET['action']="item";
+        $itemShop = snowsDatabase($item);
+        $_GET['items'] = $itemShop;
+    require "View/item.php";
 }

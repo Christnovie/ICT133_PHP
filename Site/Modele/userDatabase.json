@@ -1,19 +1,13 @@
 [
   {
-    "User": "chris",
-    "Password": "12345678",
-    "Email": "chrisnovie@gmail.com",
-    "admin": true
-  },
-  {
-    "User": "teste",
-    "Password": "password",
-    "Email": "teste@gamil.com",
-    "admin": false
-  },
-  {
-    "User": "caca",
+    "User": "user",
     "Password": "12345678",
     "Email": "cspoutnick@gmail.com"
+  },
+  {
+    "User": "chris",
+    "Password": "12345678",
+    "Email": "cspoutnick@gmail.com",
+    "Admin": false
   }
 ]

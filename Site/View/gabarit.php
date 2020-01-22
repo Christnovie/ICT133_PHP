@@ -98,11 +98,18 @@
                                     style="display: "
                                 <?php else : ?>
                                     style="display: none "
+                                <?php endif ?>
+                                 <?php if ($_GET['action'] == 'item' )  : $toggle = "Autre";  ?>
+
+                                    class="active"
+                                    <?php else : $toggle = "Autre" ?>
+
                                 <?php endif ?>>
 
-                                    <a class="dropdown-toggle">Autre <b class="caret"></b></a>
+                                    <a class="dropdown-toggle"><?= $toggle ?><b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="index.php?action=deconnexion">deconnexion</a></li>
+                                        <li><a href="'index.php?action=item">item</a></li>
 
                                     </ul>
                                 </li>
