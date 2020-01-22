@@ -9,7 +9,7 @@
 date_default_timezone_set('UTC');
 
 /** @var TYPE_NAME $Month this array content all month of year and count for the month */
-$Month = array( 'January' => 31, 'February ' => 28, 'March' => 31, 'April' => 30, 'May' => 31, 'June' => 30, 'July' => 31, 'August' => 31, 'September' => 30, 'October' => 31, 'November' => 30, 'December' => 31);
+$Month = array( 'January' => date("t"), 'February' => date("t"), 'March' => date("t"), 'April' => date("t"), 'May' => date("t"), 'June' => date("t"), 'July' => date("t"), 'August' => date("t"), 'September' => date("t"), 'October' => date("t"), 'November' => date("t"), 'December' => date("t"));
 /** @var TYPE_NAME $Dweek this array content days + abbreviation of week */
 $Dweek = array(
     'Monday' => 'Mon',
@@ -26,28 +26,22 @@ $date = array(date('j'), date('n'), date('Y'), date('D'));
 $current_date = $date[0];
 if (isset($_GET['month'])) {
     $currentMonth = $_GET['month'];
-    echo $currentMonth;
 } else {
     $currentMonth = $date[1];
     $_GET['month'] = $currentMonth;
-    echo $currentMonth;
 }
 if (isset($_GET['year'])) {
     $currentYear = $_GET['year'];
-    echo $currentMonth;
 } else {
     $currentYear = $date[2];
     $_GET['year'] = $currentYear;
-    echo $currentMonth;
 }
 if ($currentMonth < 1) {
     $currentMonth = 12;
     $currentYear = $currentYear - 1;
-    echo $currentMonth;
 } elseif ($currentMonth > 12) {
     $currentMonth = 1;
     $currentYear = $currentYear + 1;
-    echo $currentMonth;
 }
 foreach ($date as $item) {
     echo $item, ' ' ,$currentMonth,' ';
