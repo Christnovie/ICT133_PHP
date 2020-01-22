@@ -9,7 +9,23 @@
 date_default_timezone_set('UTC');
 
 /** @var TYPE_NAME $Month this array content all month of year and count for the month */
-$Month = array( 'January' => date("t"), 'February' => date("t"), 'March' => date("t"), 'April' => date("t"), 'May' => date("t"), 'June' => date("t"), 'July' => date("t"), 'August' => date("t"), 'September' => date("t"), 'October' => date("t"), 'November' => date("t"), 'December' => date("t"));
+<<<<<<< 2c7a050fb24442dd4b0c96d5091c13297b10068a
+$Month = array( 'January' => 31, 'February ' => 28, 'March' => 31, 'April' => 30, 'May' => 31, 'June' => 30, 'July' => 31, 'August' => 31, 'September' => 30, 'October' => 31, 'November' => 30, 'December' => 31);
+=======
+$Month = array(
+    'January' => date("t",mktime(0,0,0,2,0,$_GET['year'])),
+    'February' => date("t",mktime(0,0,0,3,0,$_GET['year'])),
+    'March' => date("t",mktime(0,0,0,4,0,$_GET['year'])),
+    'April' => date("t",mktime(0,0,0,5,0,$_GET['year'])),
+    'May' => date("t",mktime(0,0,0,6,0,$_GET['year'])),
+    'June' => date("t",mktime(0,0,0,7,0,$_GET['year'])),
+    'July' => date("t",mktime(0,0,0,8,0,$_GET['year'])),
+    'August' => date("t",mktime(0,0,0,9,0,$_GET['year'])),
+    'September' => date("t",mktime(0,0,0,10,0,$_GET['year'])),
+    'October' => date("t",mktime(0,0,0,11,0,$_GET['year'])),
+    'November' => date("t",mktime(0,0,0,12,0,$_GET['year'])),
+    'December' => date("t",mktime(0,0,0,1,0,$_GET['year'])));
+>>>>>>> aa
 /** @var TYPE_NAME $Dweek this array content days + abbreviation of week */
 $Dweek = array(
     'Monday' => 'Mon',
@@ -26,27 +42,33 @@ $date = array(date('j'), date('n'), date('Y'), date('D'));
 $current_date = $date[0];
 if (isset($_GET['month'])) {
     $currentMonth = $_GET['month'];
+    echo $currentMonth;
 } else {
     $currentMonth = $date[1];
     $_GET['month'] = $currentMonth;
+    echo $currentMonth;
 }
 if (isset($_GET['year'])) {
     $currentYear = $_GET['year'];
+    echo $currentMonth;
 } else {
     $currentYear = $date[2];
     $_GET['year'] = $currentYear;
+    echo $currentMonth;
 }
 if ($currentMonth < 1) {
     $currentMonth = 12;
     $currentYear = $currentYear - 1;
+    echo $currentMonth;
 } elseif ($currentMonth > 12) {
     $currentMonth = 1;
     $currentYear = $currentYear + 1;
+    echo $currentMonth;
 }
-foreach ($date as $item) {
-    echo $item, ' ' ,$currentMonth,' ';
+foreach ($Month as $item => $value) {
+    echo $item, ' ' ,$value,' ';
 }
-$choseMont = date("F", mktime(0, 0, 0, $currentMonth, 0, 0));
+$choseMont = date("F", mktime(0, 0, 0, $currentMonth +1, 0, 0));
 echo $choseMont;
 $first_daysMont = date("w", mktime(0, 0, 0, $_GET['month'], 1, $_GET['year']));
 
@@ -80,14 +102,17 @@ foreach ($Month as $item => $value) {
 
             <li class="prev"><a
                         href="Arrays_String.php?month=<?php echo $currentMonth - 1; ?>,year=<?php echo $currentYear; ?>">
-                    <button value="Precedent"></button>
+                    <button value="Precedent">Precedent</button>
                 </a>&nbsp;&nbsp;
             </li>
 
 
-            <?php echo $choseMont ?><br>
-            <span style="font-size:18px"><?php ?></span>
-            <li class="next">&#10095;</li>
+            <?php echo $currentYear ?>  <br>
+            <span style="font-size:18px"><?php  echo $choseMont ?>  </span>
+            <li class="next"><a
+                    href="Arrays_String.php?month=<?php echo $currentMonth + 1; ?>,year=<?php echo $currentYear; ?>">
+                    <button >Suivant</button>
+                </a>&nbsp;&nbsp;</li>
         </ul>
 
     </ul>
