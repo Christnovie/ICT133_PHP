@@ -34,6 +34,9 @@ if (isset($_GET['action'])) {
         case 'item' :
             item($element);
             break;
+        case 'additem' :
+            addShop($element);
+            break;
         case 'email' :
             email($email);
             break;

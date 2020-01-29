@@ -42,7 +42,7 @@
 	{
 		"id": 6,
 		"name": "Rivers",
-		"image": "83",
+		"image": "7",
 		"price": "€445,82",
 		"marque": "Egestas Incorporated",
 		"stock": 28
@@ -60,7 +60,7 @@
 		"name": "Rosa",
 		"image": "7",
 		"price": "€786,55",
-		"marque": "Tincidunt Aliquam Arcu Limited",
+		"marque": "Tincidunt Aliquam Arcu",
 		"stock": 45
 	},
 	{
@@ -74,7 +74,7 @@
 	{
 		"id": 10,
 		"name": "Nolan",
-		"image": "97",
+		"image": "4",
 		"price": "€960,40",
 		"marque": "Vivamus Molestie Associates",
 		"stock": 25
@@ -146,7 +146,7 @@
 	{
 		"id": 19,
 		"name": "Abbott",
-		"image": "97",
+		"image": "7",
 		"price": "€589,61",
 		"marque": "Turpis Non Enim LLC",
 		"stock": 51
@@ -188,7 +188,7 @@
 		"name": "Bryant",
 		"image": "17",
 		"price": "€149,82",
-		"marque": "Scelerisque Scelerisque Dui Corp.",
+		"marque": "Scelerisque Scelerisque",
 		"stock": 21
 	},
 	{
@@ -196,7 +196,7 @@
 		"name": "Reid",
 		"image": "11",
 		"price": "€603,84",
-		"marque": "Metus Vivamus Euismod Consulting",
+		"marque": "Metus Vivamus Consulting",
 		"stock": 10
 	},
 	{
@@ -238,197 +238,5 @@
 		"price": "€632,84",
 		"marque": "Urna PC",
 		"stock": 56
-	},
-	{
-		"id": 31,
-		"name": "Good",
-		"image": "79",
-		"price": "€426,74",
-		"marque": "Amet Faucibus Ut Foundation",
-		"stock": 39
-	},
-	{
-		"id": 32,
-		"name": "Pate",
-		"image": "13",
-		"price": "€206,99",
-		"marque": "Id Erat Etiam Corporation",
-		"stock": 15
-	},
-	{
-		"id": 33,
-		"name": "Dudley",
-		"image": "79",
-		"price": "€986,62",
-		"marque": "Nullam Feugiat PC",
-		"stock": 48
-	},
-	{
-		"id": 34,
-		"name": "Baldwin",
-		"image": "23",
-		"price": "€845,89",
-		"marque": "Facilisi Sed Neque Ltd",
-		"stock": 31
-	},
-	{
-		"id": 35,
-		"name": "Park",
-		"image": "83",
-		"price": "€778,76",
-		"marque": "Eget PC",
-		"stock": 13
-	},
-	{
-		"id": 36,
-		"name": "Gilliam",
-		"image": "23",
-		"price": "€099,27",
-		"marque": "Penatibus Et Magnis Consulting",
-		"stock": 20
-	},
-	{
-		"id": 37,
-		"name": "Floyd",
-		"image": "79",
-		"price": "€180,45",
-		"marque": "Lectus Consulting",
-		"stock": 59
-	},
-	{
-		"id": 38,
-		"name": "May",
-		"image": "67",
-		"price": "€073,28",
-		"marque": "Nonummy Ultricies Foundation",
-		"stock": 41
-	},
-	{
-		"id": 39,
-		"name": "Suarez",
-		"image": "13",
-		"price": "€875,69",
-		"marque": "Tempus Eu Ligula Inc.",
-		"stock": 34
-	},
-	{
-		"id": 40,
-		"name": "Sloan",
-		"image": "53",
-		"price": "€376,60",
-		"marque": "Nullam Ut Nisi LLC",
-		"stock": 26
-	},
-	{
-		"id": 41,
-		"name": "Moody",
-		"image": "23",
-		"price": "€724,10",
-		"marque": "Euismod In Inc.",
-		"stock": 29
-	},
-	{
-		"id": 42,
-		"name": "Ellison",
-		"image": "61",
-		"price": "€086,10",
-		"marque": "Amet Diam Inc.",
-		"stock": 29
-	},
-	{
-		"id": 43,
-		"name": "Lane",
-		"image": "61",
-		"price": "€462,66",
-		"marque": "Nonummy Incorporated",
-		"stock": 41
-	},
-	{
-		"id": 44,
-		"name": "Rosales",
-		"image": "43",
-		"price": "€804,07",
-		"marque": "At Risus Industries",
-		"stock": 44
-	},
-	{
-		"id": 45,
-		"name": "Brock",
-		"image": "2",
-		"price": "€281,34",
-		"marque": "Faucibus Foundation",
-		"stock": 53
-	},
-	{
-		"id": 46,
-		"name": "Flowers",
-		"image": "59",
-		"price": "€581,29",
-		"marque": "Eu Incorporated",
-		"stock": 40
-	},
-	{
-		"id": 47,
-		"name": "Weeks",
-		"image": "31",
-		"price": "€576,02",
-		"marque": "Dui Semper Et LLC",
-		"stock": 35
-	},
-	{
-		"id": 48,
-		"name": "Maxwell",
-		"image": "97",
-		"price": "€241,68",
-		"marque": "Vel Inc.",
-		"stock": 43
-	},
-	{
-		"id": 49,
-		"name": "Giles",
-		"image": "13",
-		"price": "€133,62",
-		"marque": "Ornare Sagittis Felis Consulting",
-		"stock": 16
-	},
-	{
-		"id": 50,
-		"name": "Combs",
-		"image": "37",
-		"price": "€072,60",
-		"marque": "Vel Company",
-		"stock": 18
-	},
-	{
-		"id": 51,
-		"name": "Roman",
-		"image": "43",
-		"price": "€674,59",
-		"marque": "Ut Institute",
-		"stock": 50
-	},
-	{
-		"id": 52,
-		"name": "Blanchard",
-		"image": "43",
-		"price": "€359,56",
-		"marque": "Fringilla Euismod Enim Consulting",
-		"stock": 42
-	},
-	{
-		"id": 53,
-		"name": "Benson",
-		"image": "89",
-		"price": "€013,69",
-		"marque": "Non Dui Nec Institute",
-		"stock": 23
-	},
-	{
-		"id": 54,
-		"name": "Clarke",
-		"image": "47",
-		"price": "€032,04",
-		"marque": "Rutrum Magna Cras LLP",
-		"stock": 51
 	}
 ]

@@ -9,10 +9,9 @@
 date_default_timezone_set('UTC');
 
 /** @var TYPE_NAME $Month this array content all month of year and count for the month */
-<<<<<<< 2c7a050fb24442dd4b0c96d5091c13297b10068a
-<<<<<<< 2c7a050fb24442dd4b0c96d5091c13297b10068a
+
 $Month = array( 'January' => 31, 'February ' => 28, 'March' => 31, 'April' => 30, 'May' => 31, 'June' => 30, 'July' => 31, 'August' => 31, 'September' => 30, 'October' => 31, 'November' => 30, 'December' => 31);
-=======
+
 $Month = array(
     'January' => date("t",mktime(0,0,0,2,0,$_GET['year'])),
     'February' => date("t",mktime(0,0,0,3,0,$_GET['year'])),
@@ -26,10 +25,7 @@ $Month = array(
     'October' => date("t",mktime(0,0,0,11,0,$_GET['year'])),
     'November' => date("t",mktime(0,0,0,12,0,$_GET['year'])),
     'December' => date("t",mktime(0,0,0,1,0,$_GET['year'])));
->>>>>>> aa
-=======
-$Month = array( 'January' => date("t"), 'February' => date("t"), 'March' => date("t"), 'April' => date("t"), 'May' => date("t"), 'June' => date("t"), 'July' => date("t"), 'August' => date("t"), 'September' => date("t"), 'October' => date("t"), 'November' => date("t"), 'December' => date("t"));
->>>>>>> suit
+
 /** @var TYPE_NAME $Dweek this array content days + abbreviation of week */
 $Dweek = array(
     'Monday' => 'Mon',

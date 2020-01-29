@@ -10,7 +10,7 @@
 ob_start();
 $titre = "Rent a show - Acceuil";
 if(isset($_SESSION['login']))
-$itemAcces = "item";
+$itemAcces = "additem";
 else
     $itemAcces = "login";
 $index = 0;
@@ -29,6 +29,7 @@ $index = 0;
                             foreach ($_GET['prContent'] as $item)  : ?>
                                 <?php foreach ($item as $value)  : ?>
                                    <?php if($value->id == $index || $value == 1) : ?>
+
                                         <ul class="thumbnails">
 
 
@@ -39,9 +40,9 @@ $index = 0;
 
                                              <li class="span3">
                                                     <div class="thumbnail">
-                                                      <a href="<?='index.php?action='.$itemAcces.'&element='.$value->name?>" name="<?= $value->name?>"><img src="<?= 'Modele/'.$value->image.'.jfif'?>" alt="Thumbnail Placeholder" title="Thumbnail Placeholder" /></a>
+                                                      <a href="<?='index.php?action='.$itemAcces.'&element='.$value->name?>" name="<?= $value->name?>"><img src="<?= 'View/Content/snow-image/snow'.$value->image.'.jpg'?>" alt="Thumbnail Placeholder" title="Thumbnail Placeholder" /></a>
                                                       <div class="caption">
-                                                        <h3> <?php $value->name ?> </h3>
+                                                        <h3> <?= $value->name ?><br> </h3>
                                                         <p> <?= $value->marque ?></p>
                                                         <p><a href="<?='index.php?action='.$itemAcces.'&element='.$value->name?>" class="btn btn-primary">Buy</a></p>
                                                       </div>

@@ -11,7 +11,9 @@ ob_start();
 $titre = "Rent a show - Acceuil";
 
 
-
+foreach ($_GET['items'] as $item=>$value){
+    echo $value->item;
+}
 
 
 ?>

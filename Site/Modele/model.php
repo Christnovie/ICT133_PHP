@@ -123,6 +123,7 @@ function createItemSession($userData)
  * @param $element
  */
 function addItem($element){
+    $quantity = 1;
     /** @var  $current_file * transform data of json file to variable php */
     $current_file = file_get_contents("Modele/snowData.json");
     /** affected @var $parsed * with decoding of content of @var $current_file  */
@@ -135,8 +136,15 @@ function addItem($element){
 
             foreach ($parsed_Session as $items => $values){
                 if( $values->Session == $_SESSION['login']){
-                    $values->Items = $values->Items + array( $element)
-                    ;
+                    if($values->Items->object == $element){
+                       $quantity = $values->Items->quantity;
+                        $values->Items->quantity = $quantity+1;
+                    }else{
+                        $values->Items[] =  array( 'object' => $element,
+                            'quantity' => $quantity
+                        )
+                        ;
+                    }
                     $inputdata = json_encode($parsed_Session);
                     file_put_contents("Modele/sessionItem.json",$inputdata);
 

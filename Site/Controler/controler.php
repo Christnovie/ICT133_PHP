@@ -116,15 +116,13 @@ function email($emailData){
  * @param $item
  */
 function addshop($item){
-    $_GET['action']="item";
+    $_GET['action']="produit";
     if(isset($item)){
         addItem($item);
         $_GET['element'] = "";
 
     }
-
-
-    require "View/item.php";
+    produit();
 }
 /**
  *function for item shop

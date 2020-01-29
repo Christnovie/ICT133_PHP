@@ -10,7 +10,7 @@
 
     <link href="View/Content/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="View/Content/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-
+<?php $session_timeout = event_timer_add('') ?>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -109,7 +109,7 @@
                                     <a class="dropdown-toggle"><?= $toggle ?><b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="index.php?action=deconnexion">deconnexion</a></li>
-                                        <li><a href="'index.php?action=item">item</a></li>
+                                        <li><a href="index.php?action=item">item</a></li>
 
                                     </ul>
                                 </li>
