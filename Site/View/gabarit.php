@@ -1,6 +1,10 @@
-﻿<!DOCTYPE HTML>
+﻿
+
+
+<!DOCTYPE HTML>
 <html>
 <head>
+
     <meta charset="utf-8">
     <title>Rent A Snow - Accueil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +14,7 @@
 
     <link href="View/Content/scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="View/Content/scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-<?php $session_timeout = event_timer_add('') ?>
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -67,7 +71,7 @@
                                 data-toggle="collapse" data-target=".nav-collapse">
                             NAVIGATION <span class="icon-chevron-down icon-white"></span>
                         </button>
-                        <h1 class=""><?php if (isset($_SESSION['login'])) echo'connecté en tant que ', $_SESSION['login'] ?></h1>
+                        <h2 class="right"><?php if (isset($_SESSION['login'])) echo'connecté en tant que ', $_SESSION['login'] ?></h2>
                         <div class="nav-collapse collapse">
 
                             <ul class="nav nav-pills ddmenu">

@@ -48,21 +48,20 @@ function login($loginregister)
 function register($dataUser)
 {
     $erroreConfirme = "";
-     $_GET['errorPassword'] = $erroreConfirme ;
+    $_GET['errorPassword'] = $erroreConfirme;
     $_GET['action'] = "login";
     if (isset($dataUser['createUser'])) {
-       if($dataUser['createpwd'] == $dataUser['confirmepwd']) {
-           $_GET['action'] = "login";
-           $_GET['errorConfirme'] = '';
-           if (creatUser($dataUser)) {
-               createItemSession($dataUser);
-               require "View/login.php";
-           }
-           else
-               require "View/userCreate.php";
-       }else
-           $_GET['errorConfirme'] = 'password no match';
-           require "View/userCreate.php";
+        if ($dataUser['createpwd'] == $dataUser['confirmepwd']) {
+            $_GET['action'] = "login";
+            $_GET['errorConfirme'] = '';
+            if (creatUser($dataUser)) {
+                createItemSession($dataUser);
+                require "View/login.php";
+            } else
+                require "View/userCreate.php";
+        } else
+            $_GET['errorConfirme'] = 'password no match';
+        require "View/userCreate.php";
 
     } else {
         require "View/userCreate.php";
@@ -90,7 +89,7 @@ function produit()
     $_GET['action'] = "produit";
 
     $produit_content = snowsDatabase();
-    $_GET['prContent'] =$produit_content;
+    $_GET['prContent'] = $produit_content;
     require "View/produit.php";
 }
 
@@ -104,10 +103,16 @@ function contact($_post)
     $_GET['sendMessage'] = $_post;
     require "View/contact.php";
 }
-function email($emailData){
+
+/**
+ * function for send mail in contact
+ * @param $emailData
+ */
+function email($emailData)
+{
     $_GET['action'] = "contact";
 
-    mail("cspoutnick@gmail.com \n",$emailData['email'],"test \n",$emailData['message']);
+    mail("cspoutnick@gmail.com \n", $emailData['email'], "test \n", $emailData['message']);
     require "View/contact.php";
 }
 
@@ -115,22 +120,25 @@ function email($emailData){
  * function for add item in json
  * @param $item
  */
-function addshop($item){
-    $_GET['action']="produit";
-    if(isset($item)){
+function addshop($item)
+{
+    $_GET['action'] = "produit";
+    if (isset($item)) {
         addItem($item);
         $_GET['element'] = "";
 
     }
     produit();
 }
+
 /**
  *function for item shop
  * @param $item
  */
-function item($item){
-    $_GET['action']="item";
-        $itemShop = snowsDatabase($item);
-        $_GET['items'] = $itemShop;
+function item($item)
+{
+    $_GET['action'] = "item";
+    $itemShop = snowsDatabase($item);
+    $_GET['items'] = $itemShop;
     require "View/item.php";
 }
